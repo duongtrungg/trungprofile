@@ -1,35 +1,12 @@
-# dependencies (bun install)
-node_modules
-.firebase
-README.md
-# output
-out
-dist
-*.tgz
+# Ignore everything
+*
 
-# code coverage
-coverage
-*.lcov
+# But not these files/folders
+!public/
+!public/**
+!.gitignore
+!.nojekyll
+!README.md
 
-# logs
-logs
-_.log
-report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# caches
-.eslintcache
-.cache
-*.tsbuildinfo
-
-# IntelliJ based IDEs
-.idea
-
-# Finder (MacOS) folder config
+# OS files
 .DS_Store
