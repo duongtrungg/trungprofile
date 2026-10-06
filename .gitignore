@@ -1,7 +1,7 @@
 # dependencies (bun install)
 node_modules
 .firebase
-
+README.md
 # output
 out
 dist
