@@ -2,8 +2,8 @@
 *
 
 # But not these files/folders
-
-!public/**
+!docs/
+!docs/**
 !.gitignore
 !.nojekyll
 !README.md
