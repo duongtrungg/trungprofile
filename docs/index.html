@@ -40,6 +40,9 @@
         <span class="logo-icon">🎮</span>
         <span class="logo-text">DUONG VIET TRUNG</span>
       </a>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
       <nav class="nav-links">
         <a href="#games">Trò chơi</a>
         <a href="#about">Về tôi</a>
@@ -52,22 +55,39 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-badge">🚀 INDIE GAME & APP DEVELOPER</div>
-      <h1 class="hero-title">Sáng tạo trò chơi di động & Trải nghiệm giải trí ngoại tuyến</h1>
+    <div class="hero-bg">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-glow glow-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content animate-in">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        🚀 INDIE GAME & APP DEVELOPER
+      </div>
+      <h1 class="hero-title">
+        Sáng tạo trò chơi<br />
+        <span class="gradient-text">di động & giải trí ngoại tuyến</span>
+      </h1>
       <p class="hero-desc">
-        Chào mừng bạn đến với trang chủ của <strong>DUONG VIET TRUNG</strong>. Chúng tôi chuyên thiết kế và phát triển
+        Chào mừng bạn đến với trang chủ của <strong>DUONG VIET TRUNG</strong>. Chuyên thiết kế và phát triển
         các trò chơi mini offline siêu nhẹ, mượt mà và tối ưu hiệu năng cao trên Android, Desktop và Web.
       </p>
       <div class="hero-actions">
-        <a href="#games" class="btn btn-primary">▶ Khám phá trò chơi</a>
-        <a href="#contact" class="btn btn-secondary">✉ Hợp tác & Liên hệ</a>
+        <a href="#games" class="btn btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          Khám phá trò chơi
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Hợp tác & Liên hệ
+        </a>
       </div>
 
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-num">5+</span>
+          <span class="stat-num" data-count="5">5+</span>
           <span class="stat-label">Mini Games & Apps</span>
         </div>
         <div class="stat-divider"></div>
@@ -77,7 +97,7 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num">60+ FPS</span>
+          <span class="stat-num">60 FPS</span>
           <span class="stat-label">Hiệu năng mượt mà</span>
         </div>
       </div>
@@ -96,7 +116,7 @@
 
   <!-- Games Section -->
   <section id="games" class="games-section">
-    <div class="section-header">
+    <div class="section-header animate-on-scroll">
       <span class="section-tag">DANH MỤC TRÒ CHƠI</span>
       <h2 class="section-title">Các sản phẩm game nổi bật</h2>
       <p class="section-subtitle">Tất cả trò chơi đều được thiết kế độc lập, tập trung vào lối chơi cuốn hút và bảo vệ
@@ -105,7 +125,8 @@
 
     <div class="games-grid">
       <!-- Game 1: ZicZac, Offline Mini Games -->
-      <article class="game-card featured-game">
+      <article class="game-card featured-game animate-on-scroll">
+        <div class="card-glow"></div>
         <div class="card-badge badge-hot">⚡ FLAGSHIP • V1.0</div>
         <div class="card-header">
           <img src="assets/ziczac-icon.png" alt="ZicZac Icon" class="game-icon" />
@@ -119,142 +140,207 @@
           90 độ kịch tính trên đường đua isometric 3D neon và <strong>Mê Cung Hỏa Băng</strong> vượt cạm bẫy 4 mùa cổ
           thạch.
         </p>
+        <div class="card-tags">
+          <span class="tag">🎮 Arcade</span>
+          <span class="tag">🧩 Puzzle</span>
+          <span class="tag">📴 Offline</span>
+          <span class="tag">⚡ 60FPS</span>
+        </div>
         <div class="card-actions">
           <a href="ziczac/privacy_policy.html" class="card-btn btn-policy">📜 Chính sách quyền riêng tư</a>
         </div>
       </article>
 
-      <!-- Game 3: Xếp Gạch Cổ Điển -->
-      <article class="game-card">
+      <!-- Game 2: Xếp Gạch Cổ Điển -->
+      <article class="game-card animate-on-scroll">
+        <div class="card-glow"></div>
         <div class="card-badge badge-purple">🧱 GIẢI ĐỐ</div>
         <div class="card-header">
           <div class="custom-icon-box bg-purple">🧱</div>
           <div class="game-meta">
-            <h3 class="game-title">Xếp Gạch Cổ Điển (Colored Bricks)</h3>
-            <span class="game-id">Mini game kinh điển</span>
+            <h3 class="game-title">Xếp Gạch Cổ Điển</h3>
+            <span class="game-id">Colored Bricks • Mini game kinh điển</span>
           </div>
         </div>
         <p class="game-desc">
           Trò chơi sắp xếp các khối hình logic thư giãn trí não, giao diện tối giản, tối ưu chơi nhanh không tốn pin.
         </p>
+        <div class="card-tags">
+          <span class="tag">🧩 Puzzle</span>
+          <span class="tag">🧠 Logic</span>
+          <span class="tag">📴 Offline</span>
+        </div>
         <div class="card-actions">
           <a href="xepgach/privacy_policy.html" class="card-btn btn-secondary">📜 Chính sách quyền riêng tư</a>
         </div>
       </article>
 
-      <!-- Game 4: A Chill Day -->
-      <article class="game-card">
+      <!-- Game 3: A Chill Day -->
+      <article class="game-card animate-on-scroll">
+        <div class="card-glow"></div>
         <div class="card-badge badge-amber">☕ RELAX</div>
         <div class="card-header">
           <div class="custom-icon-box bg-amber">☕</div>
           <div class="game-meta">
             <h3 class="game-title">A Chill Day</h3>
-            <span class="game-id">Ứng dụng thư giãn</span>
+            <span class="game-id">Ứng dụng thư giãn & giải tỏa</span>
           </div>
         </div>
         <p class="game-desc">
           Không gian nhẹ nhàng giúp thư giãn tâm trí, giải tỏa căng thẳng sau những giờ làm việc mệt mỏi.
         </p>
+        <div class="card-tags">
+          <span class="tag">☕ Relax</span>
+          <span class="tag">🎵 Ambient</span>
+          <span class="tag">📴 Offline</span>
+        </div>
         <div class="card-actions">
           <a href="achillday/privacy_policy.html" class="card-btn btn-secondary">📜 Chính sách quyền riêng tư</a>
         </div>
       </article>
+    </div>
+  </section>
 
-      <!-- About Developer Section -->
-      <section id="about" class="about-section">
-        <div class="about-card">
-          <div class="about-info">
-            <span class="section-tag">GIỚI THIỆU NHÀ PHÁT TRIỂN</span>
-            <h2 class="about-title">DUONG VIET TRUNG</h2>
-            <p class="about-role">Indie Mobile Game & Cross-Platform Engineer</p>
-            <p class="about-bio">
-              Với niềm đam mê kiến tạo những sản phẩm công nghệ nhẹ, tinh tế và dễ tiếp cận, tôi tập trung vào việc tạo
-              ra các trò chơi có thể chơi mọi lúc mọi nơi mà không cần kết nối mạng Internet.
-            </p>
+  <!-- About Developer Section -->
+  <section id="about" class="about-section">
+    <div class="about-card animate-on-scroll">
+      <div class="about-info">
+        <span class="section-tag">GIỚI THIỆU NHÀ PHÁT TRIỂN</span>
+        <h2 class="about-title">DUONG VIET TRUNG</h2>
+        <p class="about-role">Indie Mobile Game & Cross-Platform Engineer</p>
+        <p class="about-bio">
+          Với niềm đam mê kiến tạo những sản phẩm công nghệ nhẹ, tinh tế và dễ tiếp cận, tôi tập trung vào việc tạo
+          ra các trò chơi có thể chơi mọi lúc mọi nơi mà không cần kết nối mạng Internet.
+        </p>
 
-            <div class="principles-grid">
-              <div class="principle-item">
-                <span class="p-icon">🔒</span>
-                <div>
-                  <h4>Ưu tiên quyền riêng tư</h4>
-                  <p>Mọi thành tích và dữ liệu ván đấu đều được lưu trữ trực tiếp trên thiết bị của bạn.</p>
-                </div>
-              </div>
-              <div class="principle-item">
-                <span class="p-icon">⚡</span>
-                <div>
-                  <h4>Tối ưu hóa hiệu năng</h4>
-                  <p>Áp dụng công nghệ Tauri, Canvas API giúp kích thước gói tải cực nhỏ và chạy mượt 60 FPS.</p>
-                </div>
-              </div>
-              <div class="principle-item">
-                <span class="p-icon">🎮</span>
-                <div>
-                  <h4>Chơi Offline thực thụ</h4>
-                  <p>Không ràng buộc đăng nhập tài khoản hay bắt buộc internet để trải nghiệm trò chơi.</p>
-                </div>
-              </div>
+        <div class="principles-grid">
+          <div class="principle-item">
+            <div class="p-icon-wrap">
+              <span class="p-icon">🔒</span>
+            </div>
+            <div>
+              <h4>Ưu tiên quyền riêng tư</h4>
+              <p>Mọi thành tích và dữ liệu ván đấu đều được lưu trữ trực tiếp trên thiết bị của bạn.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="p-icon-wrap">
+              <span class="p-icon">⚡</span>
+            </div>
+            <div>
+              <h4>Tối ưu hóa hiệu năng</h4>
+              <p>Áp dụng công nghệ Tauri, Canvas API giúp kích thước gói tải cực nhỏ và chạy mượt 60 FPS.</p>
+            </div>
+          </div>
+          <div class="principle-item">
+            <div class="p-icon-wrap">
+              <span class="p-icon">🎮</span>
+            </div>
+            <div>
+              <h4>Chơi Offline thực thụ</h4>
+              <p>Không ràng buộc đăng nhập tài khoản hay bắt buộc internet để trải nghiệm trò chơi.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- Contact & Legal Section -->
-      <section id="contact" class="contact-section">
-        <div class="section-header">
-          <span class="section-tag">KẾT NỐI VÀ HỖ TRỢ</span>
-          <h2 class="section-title">Liên hệ nhà phát triển</h2>
-          <p class="section-subtitle">Nếu bạn có bất kỳ phản hồi, đề xuất tính năng hay cần hỗ trợ kỹ thuật, xin vui
-            lòng liên hệ trực tiếp.</p>
-        </div>
+  <!-- Contact & Legal Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-header animate-on-scroll">
+      <span class="section-tag">KẾT NỐI VÀ HỖ TRỢ</span>
+      <h2 class="section-title">Liên hệ nhà phát triển</h2>
+      <p class="section-subtitle">Nếu bạn có bất kỳ phản hồi, đề xuất tính năng hay cần hỗ trợ kỹ thuật, xin vui
+        lòng liên hệ trực tiếp.</p>
+    </div>
 
-        <div class="contact-card">
-          <div class="contact-item">
-            <span class="c-icon">📧</span>
-            <div class="c-text">
-              <span class="c-label">Email hỗ trợ:</span>
-              <a href="mailto:duongviettrung1710@gmail.com" class="c-link">duongviettrung1710@gmail.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">💻</span>
-            <div class="c-text">
-              <span class="c-label">GitHub:</span>
-              <a href="https://github.com/duongtrungg" target="_blank" rel="noopener noreferrer"
-                class="c-link">github.com/duongtrungg</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">📜</span>
-            <div class="c-text">
-              <span class="c-label">Tài liệu pháp lý:</span>
-              <a href="privacy_policy.html" class="c-link">Chính sách chung</a> •
-              <a href="terms.html" class="c-link">Điều khoản dịch vụ</a>
-            </div>
-          </div>
+    <div class="contact-grid animate-on-scroll">
+      <a href="mailto:duongviettrung1710@gmail.com" class="contact-card-item">
+        <div class="contact-icon-wrap bg-blue">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </div>
-      </section>
+        <span class="contact-label">Email hỗ trợ</span>
+        <span class="contact-value">duongviettrung1710@gmail.com</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://github.com/duongtrungg" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+        <div class="contact-icon-wrap bg-purple">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </div>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/duongtrungg</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="privacy_policy.html" class="contact-card-item">
+        <div class="contact-icon-wrap bg-green">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span class="contact-label">Tài liệu pháp lý</span>
+        <span class="contact-value">Chính sách & Điều khoản</span>
+        <span class="contact-arrow">→</span>
+      </a>
+    </div>
+  </section>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-brand">
-            <h3>DUONG VIET TRUNG</h3>
-            <p>Phát triển game di động độc lập • Tôn trọng quyền riêng tư • Trải nghiệm Offline</p>
-          </div>
-          <div class="footer-links">
-            <a href="index.html">Trang chủ</a>
-            <a href="ziczac/privacy_policy.html">Chính sách ZicZac</a>
-            <a href="privacy_policy.html">Chính sách chung</a>
-            <a href="terms.html">Điều khoản dịch vụ</a>
-            <a href="ads.txt">ads.txt</a>
-            <a href="app-ads.txt">app-ads.txt</a>
-          </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">🎮</span>
+          <h3>DUONG VIET TRUNG</h3>
         </div>
-        <div class="footer-bottom">
-          <p>© 2026 DUONG VIET TRUNG. Mọi quyền được bảo lưu.</p>
+        <p>Phát triển game di động độc lập • Tôn trọng quyền riêng tư • Trải nghiệm Offline</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Sản phẩm</h4>
+          <a href="index.html">Trang chủ</a>
+          <a href="#games">Trò chơi</a>
         </div>
-      </footer>
+        <div class="footer-col">
+          <h4>Pháp lý</h4>
+          <a href="ziczac/privacy_policy.html">Chính sách ZicZac</a>
+          <a href="privacy_policy.html">Chính sách chung</a>
+          <a href="terms.html">Điều khoản dịch vụ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Khác</h4>
+          <a href="ads.txt">ads.txt</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DUONG VIET TRUNG. Mọi quyền được bảo lưu.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 
 </body>
 
